@@ -1,0 +1,80 @@
+%% Exemple de CV en LaTeX. 
+%% Nicolas Couchoud
+%% 2000
+%% Adaptée par Nghia DUONG 29/11/2010
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{anysize}
+\marginsize{2cm}{2cm}{1cm}{1cm}
+\begin{document}
+
+% Je ne veux pas de numéro de page
+\pagestyle{empty}
+
+% \annee est la largeur de la première colonne, c'est à dire celle
+% contenant l'année scolaire. Elle est ici définie comme étant la
+% largeur du texte « janvier-février ». À adapter le cas échéant.
+
+\newlength{\annee}
+\settowidth{\annee}{Janvier--février}
+
+% \texte est la largeur de la deuxième colonne. Elle est définie comme
+% étant la largeur de la page moins celle de la première colonne.
+% 2\tabcolsep est la largeur de l'espacement entre les colonnes.
+
+\newlength{\texte}
+\setlength{\texte}{\textwidth} \addtolength{\texte}{-\annee} 
+	\addtolength{\texte}{-2\tabcolsep}
+
+% Le \noindent au début et les \\ ensuite servent à éviter
+% l'indentation. (Idem dans la rubrique « Divers ».)
+\begin{center}
+\noindent {\textbf{\large Tuan Nghia Duong}} \\ 
+\noindent \begin{tabular}{@{}p{8.5cm}p{8.5cm}@{}}
+D.O.B : November $20^{th}$ 1990 \\
+3 rue des Falaises&
+1005 Lausanne, Suisse \\
+\textbf{Tel.} : +33.6.85.94.79.07 &
+\textbf{@} : tuan-nghia.duong@etu.esisar.grenoble-inp.fr \\
+\end{tabular}
+\end{center}
+
+\indent Highly-driven, multilingual and analytical computer science student, with sharp leadership abilities
+as well as abundant creativity, aiming to work as head of IT projects. Particularly drawn towards Artificial
+Intelligence and Big Data.
+% Ici vient le CV lui-même.
+% Les @{} servent à éviter que LaTeX mette un espacement avant la première
+% colonne et après la dernière.
+% Les \par servent à passer à la ligne au sein d'une colonne.
+
+\subsection*{Education}
+\noindent \begin{tabular}{@{}p{\annee}p{\texte}@{}}
+
+2011--present & \textbf{Master’s degree in Computer Science and Networking}, \textit{ESISAR}, Valence, including one semester of academic exchange in \textbf{École Polytechnique Fédérale de Lausanne} \\
+2010--2011 & \textbf{Bachelor's degree in Engineering Sciences}, \textit{ESISAR}, Valence \\
+2008--2010 & \textbf{Mathematics Preparatory Course}, \textit{Lycée Chaptal}, Paris \\
+2008 & \textbf{Scientific Baccalaureat, Mathematics Speciality}, Hanoi, Vietnam \\
+2006 & \textbf{Certificate of Advanced English (CAE)}, \textit{British Council}, Hanoi, Vietnam.
+\end{tabular}
+
+\subsection*{Professional experience}
+\noindent \begin{tabular}{@{}p{\annee}p{\texte}@{}}
+2012 & \textbf{Industrial Project} supervised by Tec6: Development of a system aiming to embed multimedia data into logistic traceability. Main challenges: \textbf{Wifi geolocation}, development of a web user interface and devising a way to communicate with an existing surveillance management system. Languages used : \textbf{PHP}, \textbf{MySQL}, \textbf{Java}, \textbf{Perl}.\\
+2011 & Summer internship (11 weeks) at the \textbf{University of South Florida}. Development of a web-based survey management system using \textbf{Python} and the \textbf{TurboGears} framework.\\
+2007 & Invited as an artist to create three separate artwork pieces for the \textbf{International Designers’ Network} (IDN), in a project seeking to explore Asian cultures in a modern context and to promote young artists.\\
+\end{tabular}
+\subsection*{Skills}
+\noindent \begin{tabular}{@{}p{\annee}p{\texte}@{}}
+Languages & \textbf{Vietnamese}(mother tongue), \textbf{French}(fluent), \textbf{English}(proficient), \textbf{German}(basic) and \textbf{Chinese}(basic).\\
+Programming & Frequent uses of \textbf{PHP}, \textbf{HTML} and \textbf{MySQL}. Solid knowledge in \textbf{C}, \textbf{Python} and \textbf{JAVA}.\\
+Other & Several years of experience in artistic creation with \textbf{Adobe Photoshop}. Basic knowledge in \LaTeX.\\
+\end{tabular}
+\subsection*{Interests}
+\noindent \begin{tabular}{@{}p{\annee}p{\texte}@{}}
+Music & \textbf{Self-taught} guitar player, has helped organize several \textbf{musical events}. \textbf{Head of the music club} at ESISAR from 2011 to 2012.\\
+Puzzles & Founder and administrator of RubikVN - \textbf{Vietnam's Speed Puzzle Solving Online Community}. Main organizer of the first official speedsolving competition in Vietnam.
+\end{tabular}
+\end{document}
+

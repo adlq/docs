@@ -1,0 +1,77 @@
+%% Exemple de CV en LaTeX. 
+%% Nicolas Couchoud
+%% 2000
+%% Adaptée par Nghia DUONG 29/11/2010
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{anysize}
+\marginsize{2cm}{2cm}{1cm}{1cm}
+\begin{document}
+
+% Je ne veux pas de numéro de page
+\pagestyle{empty}
+
+% \annee est la largeur de la première colonne, c'est à dire celle
+% contenant l'année scolaire. Elle est ici définie comme étant la
+% largeur du texte « janvier-février ». À adapter le cas échéant.
+
+\newlength{\annee}
+\settowidth{\annee}{Janvier--février}
+
+% \texte est la largeur de la deuxième colonne. Elle est définie comme
+% étant la largeur de la page moins celle de la première colonne.
+% 2\tabcolsep est la largeur de l'espacement entre les colonnes.
+
+\newlength{\texte}
+\setlength{\texte}{\textwidth} \addtolength{\texte}{-\annee} 
+	\addtolength{\texte}{-2\tabcolsep}
+
+
+% Le \noindent au début et les \\ ensuite servent à éviter
+% l'indentation. (Idem dans la rubrique « Divers ».)
+\noindent {\textbf{\large Tuan Nghia DUONG}} \\
+Né le 20 novembre 1990 à Hanoï (Vietnam) \\
+3 rue des Falaises\\
+1005 Lausanne, Suisse\\
+\textbf{Tél.} : 06.85.94.79.07\\
+\textbf{Mél.} : tuan-nghia.duong@etu.esisar.grenoble-inp.fr\\
+
+% Ici vient le CV lui-même.
+% Les @{} servent à éviter que LaTeX mette un espacement avant la première
+% colonne et après la dernière.
+% Les \par servent à passer à la ligne au sein d'une colonne.
+
+\subsection*{Études}
+\noindent \begin{tabular}{@{}p{\annee}p{\texte}@{}}
+
+2011--présent & \textbf{4ème année en filière Informatique et Réseau}, \textit{ESISAR (Ecole nationale supérieure en Systèmes Avancés et Réseaux) - Grenoble INP}, Valence dont un semestre en échange Erasmus au sein de l'\textbf{École Polytechnique Fédérale de Lausanne}.\\
+2010--2011 & \textbf{Bachelor en Sciences de l'Ingénieur}, \textit{ESISAR (Ecole nationale supérieure en Systèmes Avancés et Réseaux) - Grenoble INP}, Valence.\\
+2008--2010 & \textbf{Mathématiques Supérieures (MPSI) et Mathématiques Spéciales (MP*)}, \textit{lycée
+Chaptal}, Paris. \\
+2008 & \textbf{Baccalauréat S, spécialité Mathématiques}, mention 
+très bien, \textit{lycée Alexandre Yersin de Hanoï}. \\
+2006 & \textbf{Certificate of Advanced English}, \textit{British Council}, Hanoï.\\
+\end{tabular}
+
+\subsection*{Expériences}
+\noindent \begin{tabular}{@{}p{\annee}p{\texte}@{}}
+2012 & \textbf{Projet industriel} avec l'entreprise Tec6 : Développement d'un système informatique permettant la traçabilité logistique au sein des entrepôts. Dominantes techniques : \textbf{géolocalisation Wifi}, implémentation d'une interface utilisateur web, interfaçage avec un gestionnaire existant de caméras de surveillance. Langages utilisés : \textbf{PHP, MySQL, Java, Perl.}\\
+2011 & \textbf{Stage technicien} de 11 semaines durant l'été au sein de \textbf{l'University of South Florida} pour le développement d'un \textbf{gestionnaire web de questionnaires pour étudiants}. Utilisation du framework \textbf{TurboGears} en \textbf{Python}.\\
+2007 & Contact avec \textbf{Idn (International Designers’ Network)} après avoir été invité à un événement
+en Allemagne ayant pour but de promouvoir les jeunes artistes.\\
+\end{tabular}
+\subsection*{Compétences}
+\noindent \begin{tabular}{@{}p{\annee}p{\texte}@{}}
+Linguistiques & \textbf{Vietnamien}(C2), \textbf{Français}(C1), \textbf{Anglais}(C1), \textbf{Allemand}(A1) et \textbf{Chinois}(débutant).\\
+Programmation & Utilisation fréquente du \textbf{HTML}, \textbf{PHP} et \textbf{MySQL}. Bases solides en \textbf{C}, \textbf{C++} et \textbf{JAVA}.\\
+Autres & Maîtrise basique du \LaTeX. Plusieurs années d'expérience avec \textbf{Adobe Photoshop} pour des créations artistiques.\\
+\end{tabular}
+\subsection*{Intérêts}
+\noindent \begin{tabular}{@{}p{\annee}p{\texte}@{}}
+Musique & Guitariste \textbf{autodidacte}, a contribué à l'organisation de plusieurs évènements musicaux. \textbf{Président du club des musiciens} de l'ESISAR pendant l'année 2011-2012.\\
+Casse-Têtes & Fondateur du club de \textbf{résolution rapide de casse-têtes} du Vietnam. Organisateur principal de la première compétition officielle au Vietnam. 
+\end{tabular}
+\end{document}
+
